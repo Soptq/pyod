@@ -179,7 +179,7 @@ class ECOD(BaseDetector):
                                                             self.n_jobs)
 
         all_results = Parallel(n_jobs=n_jobs, max_nbytes=None,
-                               verbose=True)(
+                               verbose=False)(
             delayed(_parallel_ecdf)(
                 n_dims_list[i],
                 X[:, starts[i]:starts[i + 1]],
